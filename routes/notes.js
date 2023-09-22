@@ -13,4 +13,4 @@ notes.get("/api/notes", (req, res) => {
   });
 });
 
-module.exports = router;
+module.exports = notes;
