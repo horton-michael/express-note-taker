@@ -1,10 +1,8 @@
-const express = require("express").Router();
+const notes = require("express").Router();
 const fs = require("fs");
 const path = require("path");
 
-const router = express.Router();
-
-router.get("/api/notes", (req, res) => {
+notes.get("/api/notes", (req, res) => {
   fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
     if (err) {
       console.log(err);
