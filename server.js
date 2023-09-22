@@ -10,6 +10,8 @@ app = express();
 PORT = process.env.PORT || 3000;
 
 // MIDDLEWARES
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // ROUTES
 app.get("/notes", (req, res) => {
