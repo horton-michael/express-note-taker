@@ -16,7 +16,6 @@ app.use(express.json());
 // ROUTES
 app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/notes.html"));
-  res.json(notes);
 });
 
 app.get("*", (req, res) => {
