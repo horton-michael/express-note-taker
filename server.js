@@ -3,6 +3,7 @@ express = require("express");
 path = require("path");
 fs = require("fs");
 
+const notesRouter = require("./routes/notes");
 // DATA
 
 // APP / PORT
@@ -12,6 +13,7 @@ PORT = process.env.PORT || 3000;
 // MIDDLEWARES
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(notesRouter);
 
 // ROUTES
 app.get("/notes", (req, res) => {
